@@ -1,4 +1,11 @@
-# To import from another file .py
-from Lecture_1 import chai
+print("Chai Aur Code")
 
-chai("Lazy")
+# def = definations (functions)
+def chai(n):
+    print(n)
+
+chai("WorkOut")
+
+
+
+
