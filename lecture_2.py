@@ -1,4 +1,6 @@
-def chai(n):
+def coffee(n):
     print(n)
 
-chai("amit")
+coffee("amit")
+
+# Modules : Codes written by others 

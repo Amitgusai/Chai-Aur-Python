@@ -1,10 +1,10 @@
 print("Chai Aur Code")
 
 # def = definations (functions)
-def chai(n):
+def tea(n):
     print(n)
 
-chai("WorkOut")
+tea("WorkOut")
 
 
 

@@ -1,7 +1,7 @@
 # To import from another file chai.py
-from lecture_1 import chai
+from lecture_1 import tea
 
-chai("Lazy")
+tea("Lazy")
 
 # Usually the byte code(runs faster) is hidden from the developer BUT 
 # when we 'import' files or code from 'another file' then it is visible
