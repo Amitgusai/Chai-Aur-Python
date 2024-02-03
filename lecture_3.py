@@ -26,5 +26,5 @@ print(y)
 # Mutable : Value ka reference change ho sakta hai 
 
 # Note : It is not like "'constant'" and "'variable'" 
-# Memory se reference hai
+# Memory ka reference hai
 
