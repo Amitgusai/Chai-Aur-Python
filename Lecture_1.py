@@ -1,5 +1,5 @@
 # To import from another file chai.py
-from lecture_1 import tea
+from chai import tea
 
 tea("Lazy")
 

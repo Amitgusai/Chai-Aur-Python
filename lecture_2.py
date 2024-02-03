@@ -3,4 +3,13 @@ def coffee(n):
 
 coffee("amit")
 
-# Modules : Codes written by others 
+
+coffee_1 = "black"
+
+coffee_2 = "latte" 
+
+coffee_3 = "milk"
+
+coffee_4 = "water"
+
+coffee_5 = "no powder"
