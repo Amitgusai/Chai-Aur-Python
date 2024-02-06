@@ -23,7 +23,7 @@
 
 # In List:
 #     New Reference will be created in memory each time a list is declared/updated whether of same value or not.
-#     A list even with Same Value assigned is still considered as of different Reference.
+#     A list even with Same Value assigned can still be considered as having different Reference.
 
 
 # WHY?:
