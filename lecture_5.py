@@ -22,8 +22,8 @@
 #   .....................................       __Most Important__      .....................................
 
 # In List:
-#     A list even with Same Value assigned is still considered as of different Reference.
 #     New Reference will be created in memory each time a list is declared/updated whether of same value or not.
+#     A list even with Same Value assigned is still considered as of different Reference.
 
 
 # WHY?:
@@ -50,5 +50,20 @@
 # >>> l2                  No impact on First Reference
 # [1, 2, 3]
 
+#   ...........................       __EXtras__      ............................
 
 
+# >>> h1 = [1,2,3]
+# >>> h2 = h1[:]            Creating a Copy (Whenever Slicing is done)
+# >>> h1
+# [1, 2, 3]
+# >>> h2                    Copy of h1
+# [1, 2, 3]
+# >>> h1 == h2
+# True
+# >>> h1 is h2              Both Reference are Different
+# False
+
+# Copy:
+# import copy
+# h2 = copy.copy(h1)
