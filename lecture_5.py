@@ -27,8 +27,8 @@
 
 
 # WHY?:
-#     As list is not immutable whose reference can not be changed which is why can be assigned to others.
-#     It is mutable i.e. So it's Reference can be changed which is why we cannot assign it to others.
+#     As list is not immutable whose reference can not be changed which is why it(reference) can be assigned to others.
+#     It is mutable i.e. So it's Reference can be changed which is why we cannot assign it(reference) to others.
 
 
 # Example: 
