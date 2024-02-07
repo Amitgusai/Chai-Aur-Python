@@ -58,6 +58,8 @@
 
 # ...............................               Tricky Problems:
 
+# >>> x, y, z 
+# (2, 3, 4)
 # >>> x < y < z                                                     Simply means: x < y and y < z 
 # True                                                              In case of 'and' : both satisfied then 'true'
 # >>> 1 == 5
