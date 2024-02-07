@@ -154,7 +154,7 @@
 #   File "<stdin>", line 1, in <module>
 # ValueError: invalid literal for int() with base 8: '28'
 
-# >>> oct(28)                                                                     Preferred : Methods                                             
+# >>> oct(28)                                                                     Generally Preferred : Methods                                             
 # '0o34'
 # >>> 0o34
 # 28
@@ -176,7 +176,7 @@
 # >>> from decimal import Decimal
 
 # >>> Decimal('0.1') + Decimal('0.1') + Decimal('0.1') + Decimal('0.3')
-# Decimal('0.6')                                                                        Precise Representation of Decimal Numbers
+# Decimal('0.6')                                                                        Precise Representation of Decimal Numbers(taken in string)
 # >>> Decimal('0.1') + Decimal('0.1') + Decimal('0.1') - Decimal('0.3')
 # Decimal('0.0')                                                                        Expected Results
 
