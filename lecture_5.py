@@ -22,8 +22,8 @@
 #   .....................................       __Most Important__      .....................................
 
 # In List:
-#     New Reference will be created in memory each time a list is declared/updated whether of same value or not.
-#     A list even with Same Value assigned can still be considered as having different Reference.
+#     New Reference will be created in memory each time a list is redeclared or declared whether of same value or not.
+#     A list even with Same Value assigned will be considered as having different Reference.
 
 
 # WHY?:
