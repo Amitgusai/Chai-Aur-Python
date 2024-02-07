@@ -84,7 +84,7 @@
 # -4
 # >>> math.trunc(3.5)
 # 3
-# >>> math.turnc( -3.9)                                     Value Towards 0
+# >>> math.turnc( -3.9)                                     Closest Towards 0
 # -3
     
     
