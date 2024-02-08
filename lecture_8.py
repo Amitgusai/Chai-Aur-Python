@@ -98,7 +98,7 @@
 # >>> ['black', 'green', 'oolong', 'ginger']
 
 
-# >>> tea_varieties.remove('green')                                             Removes any value in list
+# >>> tea_varieties.remove('green')                                             Removes specified value in list
 # >>> print(tea_varieties)
 # ['black', 'oolong', 'ginger']
 
