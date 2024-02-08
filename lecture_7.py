@@ -95,7 +95,7 @@
 # 7
 
 # >>> print(chai.find("chai"))                                                 
-# -1                                                                         If nothing found : -1 return as default ValueError
+# -1                                                                         If nothing found : -1 return as default Value
 
 # >>> chai = "ginger chai chai chai chai"
 # >>> print(chai.count("chai"))                                              No. of repeated string
