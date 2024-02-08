@@ -39,7 +39,7 @@
 # >>> repr('code')
 # "'code"
 # >>> str('code')
-# code
+# 'code'
 # >>> print('code')
 # code
 
