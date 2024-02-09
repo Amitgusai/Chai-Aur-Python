@@ -151,7 +151,7 @@
 # >>> print(order)
 # I ordered {} cups of {} coffee
 
-# >>> print(order.format(quantity, coffee))                                       format() : places variables in order
+# >>> print(order.format(quantity, coffee))                                       format() : places other variables in order
 # I ordered 4 cups of latte coffee
 
 
