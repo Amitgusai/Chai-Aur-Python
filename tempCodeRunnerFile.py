@@ -1,2 +1,0 @@
-")
-elif banana == 'yellow':
