@@ -152,6 +152,9 @@
 
 #                                                       9. List Uniqueness Checker [2 methods used]
 
+
+#                                                                   Method - 1 : Time Complexity -- O(n**2)
+
 # items  = ["mango", "apple", "orange", "apple", "banana"]
 
 # for i in range(len(items)):                                                #converting i from str to int using range
@@ -160,22 +163,23 @@
 #             print(items[i])
 #             break
             
-# But Above method :        Time Complexity : O(n**2)                                                                           Method - 1
 
-# Reducing  (using set) :          Time Complexity : O(n)                                                                       Method - 2
+ 
+
+#                                                                   Method - 2 : Time Complexity -- O(n)    [Using : set()]
 
 
 # unique = set()                                                              #set(): It only keeps unique value in it 
 # print(unique)                                                               #set(): This is an Empty set
 
 # for i in items:
-#     if i in unique:
-#         print("Duplicate:",i)
+#     if i in unique:                                                           
+#         print("Duplicate:",i)                                               Duplicate found in unique 
 #         break
-#     else:
-#         unique.add(i)
+#     else: 
+#         unique.add(i)                                                       Adding list items in empty set() : unique
     
-# print(unique)                                                               #Added by above loop
+# print(unique)                                                               Added by above loop
 
 
 
