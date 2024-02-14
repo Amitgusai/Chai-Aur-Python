@@ -124,16 +124,79 @@
         
         
 
-                                                        # 8. Prime Checker
+
+# ...........................................................               Important - 3Q           ............................................................
+
+
+
+                                                                # 8. Prime Checker
 
     
         
+# prime = int(input("Given Number: "))
+# is_prime  = True
+
+# if prime > 1:                                                           As prime numbers are positive
+#     for n in range(2, prime):                                           range from 2 as 1 and value of prime can divide prime
+#         if (prime % n == 0):
+#             is_prime = False
+#             break
+    
+# if is_prime is False:
+#     print("Given number is Not Prime")
+# else:
+#     print("Given number is Prime")
+
+
+
+
+#                                                       9. List Uniqueness Checker [2 methods used]
+
+# items  = ["mango", "apple", "orange", "apple", "banana"]
+
+# for i in range(len(items)):                                                #converting i from str to int using range
+#     for j in range(i + 1, len(items)):
+#         if(items[i] == items[j]):
+#             print(items[i])
+#             break
+            
+# But Above method :        Time Complexity : O(n**2)                                                                           Method - 1
+
+# Reducing  (using set) :          Time Complexity : O(n)                                                                       Method - 2
+
+
+# unique = set()                                                              #set(): It only keeps unique value in it 
+# print(unique)                                                               #set(): This is an Empty set
+
+# for i in items:
+#     if i in unique:
+#         print("Duplicate:",i)
+#         break
+#     else:
+#         unique.add(i)
+    
+# print(unique)                                                               #Added by above loop
 
 
 
 
 
+#                                                               10. Exponential Backoff  (Real World Usage)
 
+
+# Usage : Password, OTP [Increase wait time during retries]
+
+# import time                                                                     #using time module
+
+# wait_time = 1                                                                   #In seconds
+# max_retries = 5
+# attempts = 0
+
+# while attempts < max_retries:
+#     print("Attempt:", attempts + 1, "wait_time:", wait_time)
+#     time.sleep(wait_time)                                                       #time.sleep(//value): To sleep the system by given value
+#     wait_time *= 2
+#     attempts += 1
 
 
 
