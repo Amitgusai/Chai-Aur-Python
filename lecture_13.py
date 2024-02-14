@@ -155,16 +155,29 @@
 
 
 
+# Iteration Method in List 
+
+# >>> mylist = [1, 3, 4, 5, 2]
+# >>> iter(mylist)
+# <list_iterator object at 0x000002B8200A5630>                                       Poiting at first Memory location
 
 
 
 
+# ......................        IMP         ...................
 
 
 
+# Memory reference se jo List Iterator will : always point at the starting of memory
 
-
-
+# >>> I = iter(mylist)
+# >>> I
+# <list_iterator object at 0x000002B8200FDEA0>                                      Same memory location
+# >>> I.__next__()                                                                  All change are done by __next__ internally (indexing increasing)
+# 1
+# >>> I
+# <list_iterator object at 0x000002B8200FDEA0>                                      Same as above
+# >>>
 
 
 
