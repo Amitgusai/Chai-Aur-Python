@@ -75,7 +75,7 @@
 # >>> tea_varieties[1:1] = ['test', 'test']
 # >>> print(tea_varieties)
 # ['black', 'test', 'test', 'lemon', 'oolong', 'herbal']                       New indexing
-# >>> tea_varieties[1:3] = []                                                  insert nothing : deleting operation 
+# >>> tea_varieties[1:3] = []                                                  insert nothing : deleting values 
 # >>> print(tea_varieties)
 # ['black', 'lemon', 'oolong', 'herbal']
 
