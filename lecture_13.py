@@ -6,7 +6,7 @@
 # Iterate  ==  loop (same)
 
 
-# ....................................................            Important           ...............................................
+# ....................................................            Important - 1           ...............................................
 
 
 
@@ -35,6 +35,8 @@
 # it symbolisies that more values still exist karti hai
 
 
+
+# When we a store a file in a variable then it is itself a iterable object but in list we have to convert list to a iterable object using iter() method as list lack __next__method
 
 
 
@@ -164,14 +166,16 @@
 
 
 
-# ......................        IMP         ...................
+
+# ................................................................            IMPORTANT - 2           .....................................................
 
 
 
-# Memory reference se jo List Iterator will : always point at the starting of memory
+# Memory reference se jo List Iterator will : Always point at the starting of memory location
 
-# >>> I = iter(mylist)
-# >>> I
+
+# >>> I = iter(mylist)                                                              Lists themselves are not iterators; they lack the __next__ method.
+# >>> I                                                                             Reference of iter(mylist)
 # <list_iterator object at 0x000002B8200FDEA0>                                      Same memory location
 # >>> I.__next__()                                                                  All change are done by __next__ internally (indexing increasing)
 # 1
@@ -179,6 +183,119 @@
 # <list_iterator object at 0x000002B8200FDEA0>                                      Same as above
 # >>>
 
+
+
+# ...............................................               Iteration in list           ..........................................
+
+# >>> I.__next__()
+# 1
+# >>> I.__next__()
+# 3
+# >>> I.__next__()
+# 4
+# >>> I.__next__()
+# 5
+# >>> I.__next__()
+# 2
+# >>> I.__next__()
+# Traceback (most recent call last):
+#   File "<stdin>", line 1, in <module>
+# StopIteration
+
+
+
+
+
+# ................................................              Important - 3:      Difference in Iteration of File and List :          .......................................................
+
+
+
+# When we a store a file in a variable then it is itself a iterable object but in list we have to convert list to a iterable object using iter() method as list lack __next__method
+
+
+# File:
+
+
+# >>> f = open("chai.py")                                                               In case File: 'f' (behind the scene) ==  iter(f), - (By Default) 
+# >>> iter(f) is f                                                                      Same Reference
+# True
+
+
+# List: 
+
+
+# >>> list = [1, 3, 4]
+# >>> iter(list) is list
+# False
+
+
+
+# Dictionaries:
+
+
+# >>> dic = {"a": 1 , "b": 3}
+
+# >>> for key, value in dic.items():
+# ...     print(key,":",value)
+# ...
+# a : 1
+# b : 3
+
+
+# Manual Iteration:      iter()
+
+# >>> D = iter(dic)
+
+# >>> next(D)                                                                           Same internal working of : next() and __next__
+# 'a'
+# >>> next(D)
+# 'b'
+# >>> next(D)
+# Traceback (most recent call last):
+#   File "<stdin>", line 1, in <module>
+# StopIteration
+
+
+
+# Range: 
+
+
+# >>> I = iter(range(1, 5))                                                             Manual Iteration                                        
+# >>> next(I)   
+# 1
+# >>> next(I)
+# 2
+# >>> next(I)
+# 3
+# >>> next(I)
+# 4
+# >>> next(I)
+# Traceback (most recent call last):
+#   File "<stdin>", line 1, in <module>
+# StopIteration
+
+
+
+# String: 
+    
+# >>> I = iter("string")
+
+# >>> next(I)
+# 's'
+# >>> next(I)
+# 't'
+# >>> next(I)
+# 'r'
+# >>> next(I)
+# 'i'
+# >>> next(I)
+# 'n'
+# >>> next(I)
+# 'g'
+# >>> next(I)
+# Traceback (most recent call last):
+#   File "<stdin>", line 1, in <module>
+# StopIteration
 
 
 
