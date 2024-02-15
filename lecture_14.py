@@ -131,11 +131,11 @@
 
 
 
-# .........................................................           Function with **kwargs
+# .........................................................           8. Function with **kwargs
 
 
 
-# def print_kwargs(**kwargs):                                                       # '**' : key value in pair ['*' : does not recongnize the arguments]
+# def print_kwargs(**kwargs):                                                       # '**' : key value in pair ['*' : does not recongnize the named arguments]
 #     for key, value in kwargs.items():
 #         print(key, value)
     
@@ -146,24 +146,38 @@
 
 
 
-# ..............................................................          Generator Function with yield 
+# ..............................................................          9. Generator Function with yield 
 
 
 
 
+# def even_generator(limit):                                                                   # We can also use an empty list to solve this
+#     for i in range(2, limit + 1, 2):                                                         # 2 is not inclusive : it only skips 1 value (as we needed even numbers ony)
+#         yield i                                                                              # yield : Also returns value 'but' saves previous state of variable 'i' in memory and performs the next tasks with it's previous state in mind every single time a function is called
+    
+    
+# for num in even_generator(10):
+#     print(num)
+
+
+# how is it now iterable, why? : range() is iterable
 
 
 
 
+# ...............................................................             10. Recursive Function 
 
 
 
+# Exit check karo in Recursion 
+# def factorial(n):                                                                            # Indinite loop
+#     return n * factorial(n-1)
+
+# def factorial(n):                                                                             # Behind the scene a tree is forming (for understanding)
+#     if n == 0:                                                                                # Exit strategy sochni hai in Recursion
+#         return 1 
+#     else:
+#         return n * factorial(n-1)
 
 
-
-
-
-
-
-
-
+# print(factorial(5))
