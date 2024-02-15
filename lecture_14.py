@@ -1,4 +1,10 @@
-# .................................................                 Functions
+# .........................................................................               Function question
+
+
+
+
+
+# .................................................                 1. Basic Function Syntax
 
 
 # function(defination)    :   def 
@@ -12,7 +18,8 @@
 
 
 
-# ...........................................
+
+# .....................................................             2. Function with Multiple Parameters
 
 
 
@@ -25,7 +32,7 @@
 
 
 
-# ........................................................
+# ........................................................              3. Polymorphism in Function (multiple task performing)
 
 
 
@@ -42,7 +49,7 @@
 
 
 
-# ..........................................................
+# ..........................................................            4. Function Returning Multiple Values
 
 
 
@@ -60,11 +67,10 @@
 
 
 
-# ..........................................................
+# ..........................................................            5. Default Parameter Value:
 
 
 
-# 5. Default Parameter Value:
 
 # def greet(name = "default value"):                                     This is a default value if no arguments is passed to the Function def
 #     return "Hello, " + name + "!"
@@ -74,7 +80,73 @@
 
 
 
-# ........................................................
+# ........................................................              6. Lambda Function
+
+
+
+                                                                                # lambda function : functions with no name [Directly function likh sakte hai single line]
+                                                                                # useful when a functions working is not multiple times in a code
+                                                                                
+# cube = lambda x:x ** 3                                                        # First x : parameter and second time : code working
+                                                                                # This defination of lambda cannot be stored in another variable (Reference can)
+                                                                                
+# print(cube(3))                                                                # cube is storing a lambda function in itself
+
+                                                                                # Use of lambda in python frameworks (more)
+
+
+
+
+# ..........................................................            7. Function with *args ('*' : Ashtrick)
+
+
+
+# def sum_all(number):
+#     sum = 0                                                                    # Loop in funtion
+#     for i in number:
+#         sum = sum + i
+#     return sum 
+    
+
+# print(sum_all([1, 2, 5]))                                                      # passing it as an Array
+# print(sum_all([1, 2, 3, 4, 5, 5]))
+# print(sum_all([8, 6, 5, 4, 14, 5]))
+
+
+                                            # In python : *args
+
+
+# def sum_all(*args):                                                             # '*' : Multiple Arguments can be handled [args(good practice) can be replaced but not '*']
+#     print(args)                                                                 # Tuple format
+#     for i in args:
+#         print(i * 2)
+#     return sum(args)                                                            # sum() : Default method to add
+ 
+
+# print(sum_all(1, 2, 3))
+# print(sum_all(1, 2, 3, 4, 5, 5))
+# print(sum_all(8, 6, 5, 4, 14, 5))
+
+
+
+
+
+# .........................................................           Function with **kwargs
+
+
+
+# def print_kwargs(**kwargs):                                                       # '**' : key value in pair ['*' : does not recongnize the arguments]
+#     for key, value in kwargs.items():
+#         print(key, value)
+    
+# print_kwargs(name = "amit", power = "inner_thoughts")                             # Named Arguments
+# print_kwargs(name = "amit")
+# print_kwargs(name = "amit", power = "inner_thoughts", weak = "understading")
+
+
+
+
+# ..............................................................          Generator Function with yield 
 
 
 
