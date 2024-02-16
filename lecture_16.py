@@ -112,28 +112,71 @@ class Car:
         self.__brand = brand                                                                # '__' (variable becomes private) : This means that the variable can be accessed within a class but now an Object cannot access it.                               
         self.model = model                                                                  # To access them : we create methods
         
-    def get_brand(self):                                                                    # Convention : to start with 'get_' (we can change but will be breaking convention in industry)
+    def get_brand(self):                                                                    # getters Convention : to start with 'get_' (we can change but will be breaking convention in industry)
         return self.__brand + " !"                                                          # Useful in Cases where we need an response/input with some additional units for good appearance
         
     def full_name(self):
         return f"{self.__brand} {self.model}"
     
     
-class ElectricCar(Car):                                                               
-    def __init__(self, brand, model, battery_size):
-        super().__init__(brand, model)                                                
-        self.battery_size = battery_size                                              
+# class ElectricCar(Car):                                                               
+#     def __init__(self, brand, model, battery_size):
+#         super().__init__(brand, model)                                                
+#         self.battery_size = battery_size                                              
         
         
-my_tesla = ElectricCar("Tesla", "model-S", "90kWh")        
+# my_tesla = ElectricCar("Tesla", "model-S", "90kWh")        
 
-print(my_tesla.__brand)
-print(my_tesla.get_brand())            
+# print(my_tesla.__brand)
+# print(my_tesla.get_brand())            
 
 
 
-# What is setter?                                                                           # HomeWork
+
+# ....................................................              What is setter?                                                                           # HomeWork
  
+
+
+# class Car:                                                                  
+#     # Syntax:                                                               
+#     def __init__(self, brand, model):                                                                        
+                                                                            
+#         self.__brand = brand                                                               
+#         self.model = model 
+#     def get_brand(self):
+#         return self.__brand
+
+#     def set_brand(self, new_brand):
+#         self.__brand = new_brand
+
+#     def full_name(self):
+#         return f"{self.brand} {self.model}"
+
+# my_vehicle = Car("tata", "nexon") 
+
+# my_vehicle.set_brand("Toyota")                                                                  # setter method : Changes the variable  and update with a new value
+
+# print(my_vehicle.get_brand())
+# print(my_vehicle.brand)
+
+
+
+
+# ........................................................            5. Polymorphism
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
