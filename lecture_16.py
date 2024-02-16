@@ -200,57 +200,36 @@
 
 
 
-# ............................................................            6. Class Variables
+# ............................................................            6. Class Variables Count
 
 
 
 
-class Car:
-    def __init__(self, model, brand):
-    
-    # Encapsulation '__' -->    private
-        self.__brand = brand
-        self.model = model
-    
-    # getter method
-    def get_method(self):
-        return self.__brand
-    
-    # setter method
-    def set_method(self, brand):
-        self.__brand = brand
+class Car:   
+    total_car = 0                                                               
+    # Syntax:                                                               
+    def __init__(self, brand, model):                                                                        
+        self.brand = brand                                                               
+        self.model = model 
+        Car.total_car += 1                                                                              # Total number of variables counted (not much use)
         
-    # Polymorphism
-    def fuel_type(self):
-        return "petrol"
+    
+class ElectricCar(Car):                                                               
+    def __init__(self, brand, model, battery_size):
+        super().__init__(brand, model)                                                
+        self.battery_size = battery_size                                              
         
-class Electric(Car):
-    
-    def __init__(self, brand, model, battery):
-        super().__init__(brand, model)
-        self.battery = battery
-    
-    # polymorphism
-    def fuel_type(self):
-        return "electric"
-    
-    
-nexon = Electric("T198", "Toyota", "89kWh")
-print(nexon.fuel_type())
+        
+my_tesla = ElectricCar("Tesla", "model-S", "90kWh")                                                     # This is also being created by __init__method in class Car  
 
-# print(nexon.__brand)
-print(nexon.model)
-print(nexon.battery)
+safari= Car("Tata", "Safari")     
 
-# set_method -->  can Update the value of brand
-nexon.set_method("Maruti")
-print(nexon.get_method())
+safari_2 = Car("Toyoto", "Safari")
+                                                                                                        # In Python : No Immediate Garbage Collection
+safari_3= Car("Kia", "Safari")
 
-vehicle = Car("Toyota", "cyron")
-print(vehicle.fuel_type())
-
-
-
+# print(safari.total_car)                                                                               # Not a right way to access it
+print(Car.total_car)                                                                                    # Direct access
 
 
 
