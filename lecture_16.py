@@ -105,18 +105,18 @@
 
 
 
-class Car:                                                                  
-    # Syntax:                                                               
-    def __init__(self, brand, model):                                                                        
+# class Car:                                                                  
+#     # Syntax:                                                               
+#     def __init__(self, brand, model):                                                                        
                                                                             
-        self.__brand = brand                                                                # '__' (variable becomes private) : This means that the variable can be accessed within a class but now an Object cannot access it.                               
-        self.model = model                                                                  # To access them : we create methods
+#         self.__brand = brand                                                                # '__' (variable becomes private) : This means that the variable can be accessed within a class but now an Object cannot access it.                               
+#         self.model = model                                                                  # To access them : we create methods
         
-    def get_brand(self):                                                                    # getters Convention : to start with 'get_' (we can change but will be breaking convention in industry)
-        return self.__brand + " !"                                                          # Useful in Cases where we need an response/input with some additional units for good appearance
+#     def get_brand(self):                                                                    # getters Convention : to start with 'get_' (we can change but will be breaking convention in industry)
+#         return self.__brand + " !"                                                          # Useful in Cases where we need an response/input with some additional units for good appearance
         
-    def full_name(self):
-        return f"{self.__brand} {self.model}"
+#     def full_name(self):
+#         return f"{self.__brand} {self.model}"
     
     
 # class ElectricCar(Car):                                                               
@@ -162,7 +162,46 @@ class Car:
 
 
 
-# ........................................................            5. Polymorphism
+# ........................................................            5. Polymorphism (concept)
+
+
+# It allows different objects to respond to the same method call in different ways
+# In the given context, the fuel_type() method is an example of polymorphism, as it is implemented differently in different classes that inherit from a common superclass
+
+
+# class Car:                                                                  
+#     # Syntax:                                                               
+#     def __init__(self, brand, model):                                                                        
+#         self.brand = brand                                                               
+#         self.model = model 
+    
+#     def full_name(self):
+#         return f"{self.brand} {self.model}"
+    
+#     def fuel_type(self):
+#         return "petrol or diesel"
+        
+    
+# class ElectricCar(Car):                                                               
+#     def __init__(self, brand, model, battery_size):
+#         super().__init__(brand, model)                                                
+#         self.battery_size = battery_size  
+    
+#     def fuel_type(self):
+#         return "electric charge"                                            
+        
+        
+# my_tesla = ElectricCar("Tesla", "model-S", "90kWh")  
+# print(my_tesla.fuel_type())      
+
+# safari = Car("Tata", "Safari")
+# print(safari.fuel_type())
+
+
+
+
+# ............................................................            6. Class Variables
+
 
 
 
