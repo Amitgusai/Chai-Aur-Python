@@ -19,7 +19,7 @@
     
 #     # pass        -->                                                       # pass(a Keyword) : a placeholder to store future code
     
-# my_car = Car("TATA", "Nexon")                                               # Car() -> Syntax to create 'object' and my_car is copy of Object : Car()
+# my_car = Car("TATA", "Nexon")                                               # Car() -> Syntax to create 'object' 
 
 # print(my_car.brand)                                                         # The code `print(my_car.brand)` is accessing the `brand` attribute of the `my_car` object using the dot notation '.' and printing its value.
 # print(my_car.model)
@@ -28,7 +28,7 @@
 
 
 
-# ''''''''''''''''''''''''''''''''''''''''''''              Instance of a Class:      ( my_car --> specific Object, instance )
+# ''''''''''''''''''''''''''''''''''''''''''''              Instance of a Class:      ( my_car --> specific Object, instance of a class)
 
     
 # An instance of a class is like a special version of something that we create based on a blueprint. Let's say we have a blueprint for a car. The blueprint tells us what a car 
@@ -56,13 +56,13 @@
 #         self.model = model   
         
 #     def full_name(self):
-#         return f"{self.brand} {self.model}"                                         # In a class, all variables will always be taken as self.variable format (using f string)
+#         return f"{self.brand} {self.model}"                                         # In a class, all variables will always be taken in self.variable format 
     
 # my_car = Car("TATA", "Nexon")                                               
 
 # print(my_car.brand)                                                         
 # print(my_car.model)
-# print(my_car.full_name())                                                           # as full_name is a function, so we will use '()' to access it
+# print(my_car.full_name())                                                           # as full_name is a function, so we will use '()' to access/execute it
     
 
 
@@ -205,10 +205,49 @@
 
 
 
+class Car:
+    def __init__(self, model, brand):
+    
+    # Encapsulation '__' -->    private
+        self.__brand = brand
+        self.model = model
+    
+    # getter method
+    def get_method(self):
+        return self.__brand
+    
+    # setter method
+    def set_method(self, brand):
+        self.__brand = brand
+        
+    # Polymorphism
+    def fuel_type(self):
+        return "petrol"
+        
+class Electric(Car):
+    
+    def __init__(self, brand, model, battery):
+        super().__init__(brand, model)
+        self.battery = battery
+    
+    # polymorphism
+    def fuel_type(self):
+        return "electric"
+    
+    
+nexon = Electric("T198", "Toyota", "89kWh")
+print(nexon.fuel_type())
 
+# print(nexon.__brand)
+print(nexon.model)
+print(nexon.battery)
 
+# set_method -->  can Update the value of brand
+nexon.set_method("Maruti")
+print(nexon.get_method())
 
-
+vehicle = Car("Toyota", "cyron")
+print(vehicle.fuel_type())
 
 
 
