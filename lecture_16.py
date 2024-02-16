@@ -26,6 +26,8 @@
 
 
 
+
+
 # ''''''''''''''''''''''''''''''''''''''''''''              Instance of a Class:      ( my_car --> specific Object, instance )
 
     
@@ -36,6 +38,7 @@
 # and a model. We can give it a specific brand, like Toyota, and a specific model, like Camry. And then we can use that instance of the car class to do things, like drive it or show it to our friends.
 
 # In simple terms, an instance of a class is like a real thing that we create based on a plan or blueprint. It has all the characteristics that the plan says it should have
+
 
 
 
@@ -97,7 +100,7 @@
 
 
 
-# ..........................................................          4. Encapsulation
+# ..........................................................          4. Encapsulation  (example: a Capsule)
 
 
 
@@ -106,17 +109,30 @@ class Car:
     # Syntax:                                                               
     def __init__(self, brand, model):                                                                        
                                                                             
-        self.brand = brand                                                 
-        self.model = model   
+        self.__brand = brand                                                                # '__' (variable becomes private) : This means that the variable can be accessed within a class but now an Object cannot access it.                               
+        self.model = model                                                                  # To access them : we create methods
+        
+    def get_brand(self):                                                                    # Convention : to start with 'get_' (we can change but will be breaking convention in industry)
+        return self.__brand + " !"                                                          # Useful in Cases where we need an response/input with some additional units for good appearance
         
     def full_name(self):
-        return f"{self.brand} {self.model}" 
+        return f"{self.__brand} {self.model}"
+    
+    
+class ElectricCar(Car):                                                               
+    def __init__(self, brand, model, battery_size):
+        super().__init__(brand, model)                                                
+        self.battery_size = battery_size                                              
+        
+        
+my_tesla = ElectricCar("Tesla", "model-S", "90kWh")        
 
-my_car = Car("TATA", "Nexon")                                               
-
-print(my_car.brand)                                                         
-print(my_car.model)
-print(my_car.full_name()) 
+print(my_tesla.__brand)
+print(my_tesla.get_brand())            
 
 
+
+
+
+ 
 
