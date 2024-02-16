@@ -65,15 +65,15 @@
 # //////////////////////////////////
 
 
-def chaicoder(n):
+def chaicoder(num):
     def actual(x):
-        return x ** n
+        return x ** num
     return actual                                                                           # returning definition of actual (Reference)
 
-f = chaicoder(2)                                                                            # closure : f is actually ka reference of actual function
+f = chaicoder(2)                                                                            # closure : 'f' contain the definition/reference of actual() function + BackPack -> reference of variables(num) used in it are also returned to 'f'
 g = chaicoder(3)
 
-print(f(7))                                                                                 # Argument given to the actual function which is stored in f and g varible
+print(f(7))                                                                                 # Argument given to the actual() function which is stored in f and g variable
 print(g(5))                                                                                 # f and g are closure (function object)
 
 
