@@ -205,38 +205,191 @@
 
 
 
-class Car:   
-    total_car = 0                                                               
-    # Syntax:                                                               
-    def __init__(self, brand, model):                                                                        
-        self.brand = brand                                                               
-        self.model = model 
-        Car.total_car += 1                                                                              # Total number of variables counted (not much use)
+# class Car:   
+#     total_car = 0                                                               
+#     # Syntax:                                                               
+#     def __init__(self, brand, model):                                                                        
+#         self.brand = brand                                                               
+#         self.model = model 
+#         Car.total_car += 1                                                                              # Total number of variables counted (not much use)
         
     
-class ElectricCar(Car):                                                               
-    def __init__(self, brand, model, battery_size):
-        super().__init__(brand, model)                                                
-        self.battery_size = battery_size                                              
+# class ElectricCar(Car):                                                               
+#     def __init__(self, brand, model, battery_size):
+#         super().__init__(brand, model)                                                
+#         self.battery_size = battery_size                                              
         
         
-my_tesla = ElectricCar("Tesla", "model-S", "90kWh")                                                     # This is also being created by __init__method in class Car  
+# my_tesla = ElectricCar("Tesla", "model-S", "90kWh")                                                     # This is also being created by __init__method in class Car  
 
-safari= Car("Tata", "Safari")     
+# safari= Car("Tata", "Safari")     
 
-safari_2 = Car("Toyoto", "Safari")
-                                                                                                        # In Python : No Immediate Garbage Collection
-safari_3= Car("Kia", "Safari")
+# safari_2 = Car("Toyoto", "Safari")
+#                                                                                                         # In Python : No Immediate Garbage Collection
+# safari_3= Car("Kia", "Safari")
 
-# print(safari.total_car)                                                                               # Not a right way to access it
-print(Car.total_car)                                                                                    # Direct access
-
-
+# # print(safari.total_car)                                                                               # Not a right way to access it
+# print(Car.total_car)                                                                                    # Direct access
 
 
 
 
 
+# ..........................................................          7. Static Method
+
+
+# Static methods are just like regular method. But unlike regular methods, Static methods doesn't need an object of a class to be called
+# A special way to get information or do something without needing to use the object directly
+
+
+# class Car:   
+    
+#     total_car = 0                                                               
+                                                                
+#     def __init__(self, brand, model):                                                                        
+#         self.brand = brand                                                               
+#         self.model = model 
+#         Car.total_car += 1                                                                              # Total number of variables counted (not much use)
+    
+#     @staticmethod                                                                                       # @static method : Decorators
+#     def general_description():                                                                          # Not any need to use self in static method (no linkage needed for object)
+#         return "Car is 5 star rated in toughness." 
+    
+# class ElectricCar(Car):                                                               
+#     def __init__(self, brand, model, battery_size):
+#         super().__init__(brand, model)                                                
+#         self.battery_size = battery_size                                                                                          
+
+# safari= Car("Tata", "Safari")     
+
+# # print(safari.general_description())                                                                   # Object unable to access a static method
+# print(Car.general_description())                                                                        # Static method using only class and no need of Object
+  
 
 
 
+
+# .......................................................            8. Property Decorators
+
+
+# To enhance method ki functionality and to implement some rules.
+
+
+# class Car:   
+    
+#     total_car = 0                                                               
+                                                                
+#     def __init__(self, brand, model):                                                                        
+#         self.brand = brand                                                               
+#         self.__model = model                                                                            # making 'model' private
+#         Car.total_car += 1                                                                              
+    
+    
+#     @staticmethod                                                                                       # @static method : Decorators
+#     def general_description():                                                                         
+#         return "Car is 5 star rated in toughness." 
+    
+#     @property                                                                                           # @property : read-only , over-riding is now not possible (accessable only as a property )
+#     def model(self):
+#         return self.__model
+    
+# class ElectricCar(Car):                                                               
+#     def __init__(self, brand, model, battery_size):
+#         super().__init__(brand, model)                                                
+#         self.battery_size = battery_size                                                                                          
+
+# safari= Car("Tata", "Safari")  
+
+# safari.model = "city"                                                                                    # We have to prevent this change/update
+                                                             
+# print(safari.model)                                                                    
+  
+
+
+
+
+# .........................................................           9. Class Inheritance and isinstance() function
+
+
+
+
+
+# class Car:   
+    
+#     total_car = 0                                                               
+                                                                
+#     def __init__(self, brand, model):                                                                        
+#         self.brand = brand                                                               
+#         self.__model = model                                                                            
+#         Car.total_car += 1                                                                              
+    
+    
+#     @staticmethod                                                                                       
+#     def general_description():                                                                         
+#         return "Car is 5 star rated in toughness." 
+    
+#     @property                                                                                           
+#     def model(self):
+#         return self.__model
+    
+# class ElectricCar(Car):                                                               
+#     def __init__(self, brand, model, battery_size):
+#         super().__init__(brand, model)                                                
+#         self.battery_size = battery_size                                                                                          
+
+
+# my_tesla = ElectricCar("Tesla", "model-s", "90-KWH")
+
+# # safari= Car("Tata", "Safari")  
+
+# print(isinstance(my_tesla, Car))                                                                        # isinstance() function : object of ElectricCar as well as Car
+# print(isinstance(my_tesla, ElectricCar))    
+
+
+
+
+
+# ..........................................................         10. Multiple Inheritance           (Doubt)
+
+
+
+# class Battery:
+#     def __init__(self, model):
+#         self.model = model
+        
+# class Engine:
+#     def __init__(self, power):
+#         self.power = power
+        
+# class ElectricCar(Battery, Engine):
+#     def __init__(self, model, power):
+#         super().__init__(model)
+#         # super().__init__(power)                                                                               # This is over-riding my Battery class
+
+# my_new_tesla = ElectricCar("cello", "506-HorsePower")
+
+# print(my_new_tesla.model)
+# # print(my_new_tesla.power)
+    
+    
+    
+    
+    
+# ////////////////////////////////////////////////////////////////////////////////////
+
+
+
+# class Battery:
+#     def battery_size(self):
+#         return "long lasting battery"
+    
+# class Engine:
+#     def engine_info(self):
+#         return "more cc than a bike's"
+    
+# class ElectricCar(Battery, Engine):
+#     pass
+
+# my_new_tesla = ElectricCar()
+# print(my_new_tesla.engine_info())
+# print(my_new_tesla.battery_size())
