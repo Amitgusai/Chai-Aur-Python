@@ -153,7 +153,7 @@
 
 # def even_generator(limit):                                                                   # We can also use an empty list to solve this
 #     for i in range(2, limit + 1, 2):                                                         # 2 is not inclusive : it only skips 1 value (as we needed even numbers ony)
-#         yield i                                                                              # yield : Also returns value 'but' saves previous state of variable 'i' in memory and performs the next tasks with it's previous state in mind every single time a function is called
+#         yield i                                                                              # yield : Also returns value 'but' also saves previous state of variable 'i' in memory and performs the next tasks with it's previous state in mind every single time a function is called
     
     
 # for num in even_generator(10):

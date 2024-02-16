@@ -26,7 +26,7 @@
 # Iterable Object: list, file etc. 
 # Objects which allow iteration or looping in it.
 # iter objects responses by returning __next__
-# Iterable object point at the start from where continuous memory allocation starts + __nest__
+# Iterable object ->    point at the start from where continuous memory allocation starts + __nest__
 
 
 # 3.
@@ -126,7 +126,7 @@
 # >>> f = open('chai.py')
 # >>> while True:
 # ...     line = f.readline()
-# ...     if not line:                                                            not(a keyword): Handling empty lines
+# ...     if not line:                                                            not(a keyword): Handling no lines
 # ...             break
 # ...     print(line,end = '')
 # ...                                                                             Iterable tools are pre-pragrammed how to read file and handle StopIteraiton Exception
@@ -174,6 +174,7 @@
 # Memory reference se jo List Iterator will : Always point at the starting of memory location
 
 
+# >>> mylist = [1, 3, 4, 5, 2]
 # >>> I = iter(mylist)                                                              Lists themselves are not iterators; they lack the __next__ method.
 # >>> I                                                                             Reference of iter(mylist)
 # <list_iterator object at 0x000002B8200FDEA0>                                      Same memory location
@@ -210,7 +211,7 @@
 
 
 
-# When we a store a file in a variable then it is itself a iterable object but in list we have to convert list to a iterable object using iter() method as list lack __next__method
+# When we a store a 'file' in a variable then it is itself a iterable object but in 'list' we have to convert list to a iterable object using iter() method as list lack __next__method
 
 
 # File:
@@ -296,9 +297,6 @@
 # Traceback (most recent call last):
 #   File "<stdin>", line 1, in <module>
 # StopIteration
-
-
-
 
 
 
