@@ -56,9 +56,9 @@ def f1():
     return f2                                                                           # f2 : definition return hora hai (reference)
                                                                                         # f2() : this means execution
                                                                                         
-result = f1()                                                                           # Reference of f2
-print(result)                                                                           
-result()                                                                                # Closure : not only the defination of f2 but also references of all the variables associated or used with it are being send to result (ex : BackPack)
+result = f1()                                                                           
+print(result)                                                                           # Reference of f2
+result()                                                                                # Closure : 'result' contain the definition/reference of actual() function + BackPack -> reference of variables(x) used in it are also stored in 'result')
 
 
 
@@ -70,10 +70,12 @@ def chaicoder(num):
         return x ** num
     return actual                                                                           # returning definition of actual (Reference)
 
-f = chaicoder(2)                                                                            # closure : 'f' contain the definition/reference of actual() function + BackPack -> reference of variables(num) used in it are also returned to 'f'
+f = chaicoder(2)                                                                            # closure : 'f' contain the definition/reference of actual() function + BackPack -> reference of variables(num) used in it are also stored in 'f'
 g = chaicoder(3)
 
-print(f(7))                                                                                 # Argument given to the actual() function which is stored in f and g variable
+                                                                                             # To Prove : print
+                                                                                            
+print(f(5))                                                                                 # Argument given to the actual() function which is stored in f and g variable
+                                                                                            # Taking memory reference of num and holding it: value of num = 2
 print(g(5))                                                                                 # f and g are closure (function object)
-
 
