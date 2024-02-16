@@ -64,7 +64,41 @@
 
 
 
-# .........................................................           3. Inheritance
+# .........................................................           3. Inheritance (Bringing Functionality)
+
+
+
+# class Car:                                                                  
+#     # Syntax:                                                               
+#     def __init__(self, brand, model):                                                                        
+                                                                            
+#         self.brand = brand                                                 
+#         self.model = model   
+        
+#     def full_name(self):
+#         return f"{self.brand} {self.model}"        
+
+# class ElectricCar(Car):                                                               # (Car) : ElectricCar is inheriting Car class
+#     def __init__(self, brand, model, battery_size):
+        
+#         super().__init__(brand, model)                                                # The line `super().__init__(brand, model)` is calling the `__init__` method of the parent class (`Car`) 
+#         self.battery_size = battery_size                                              # and passing the `brand` and `model` arguments to it. This allows -->
+#                                                                                       # 'ElectricCar' class to inherit the `brand` and `model` attributes from the `Car` class
+        
+        
+
+# my_tesla = ElectricCar("Tesla", "model-S", "90kWh")
+
+# print(my_tesla.brand)  
+# print(my_tesla.model)  
+# print(my_tesla.battery_size)     
+# print(my_tesla.full_name())
+                                     
+
+
+
+# ..........................................................          4. Encapsulation
+
 
 
 
@@ -76,27 +110,13 @@ class Car:
         self.model = model   
         
     def full_name(self):
-        return f"{self.brand} {self.model}"        
-    
+        return f"{self.brand} {self.model}" 
+
 my_car = Car("TATA", "Nexon")                                               
 
-# print(my_car.brand)                                                         
-# print(my_car.model)
-# print(my_car.full_name())   
-
-
-class ElectricCar :
-    def __init__(self, battery):
-        self.battery_size = battery
-
-EV = ElectricCar("10")
-
-print(EV.battery_size)
-
-
-
-
-
+print(my_car.brand)                                                         
+print(my_car.model)
+print(my_car.full_name()) 
 
 
 
