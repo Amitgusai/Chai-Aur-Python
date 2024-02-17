@@ -1,13 +1,25 @@
 # ...................................................         Decorators in Python
 
 
+# A decorator is a function that takes another function as input and extends its functionality without modifying its code.
+# Decorators in Python are like tollbooths for functions, adding functionality without changing the original function.
+
+
+# Most Basic Decorator: 
+    
+# def debug(func):
+#     def wrapper():
+#         return func()
+    
+#     return wrapper   
+
+
 
 # .....................................................           1. Timing Function Execution
 
 
 
 # Time a function takes to execute - using decorator
-# We can take decorator as a toll pass
 
 # import time
 
@@ -38,21 +50,58 @@
 # .........................................................         2. Debugging Function Calls
 
 
+# To print the function name and the values of its arguments 
 
-def greet(name, greeting = "Hello"):
-    print(f"{greeting}, {name}")
+
+# def debug(func):
+#     def wrapper(*args, **kwargs):
+#         ans = func(*args, **kwargs)                                                                                     # To access name of the arguments :-
+#         args_value = ', '.join(str(args) for args in args)                                                              # join() : we get a iterable list --> (comprehension) applying looping --> str(arg) : value stored and converted to string
+#         kwargs_value = ', '.join(f"{key}={value} " for key, value in kwargs.items())
+#         print(f"calling {func.__name__} with args {args_value} and kwargs {kwargs_value}")
+#         return ans
     
-greet("chai", greeting="hanji")
+#     return wrapper                                                                                                      # wrapper ki definition return hori to debug 
+
+# @debug
+# def hello():
+#     print("hello")
+    
+# @debug
+# def greet(name, greeting = "Hello"):
+#     print(f"{greeting}, {name}")
+  
+# hello()  
+# greet("chai", greeting="hanji")
 
 
 
 
+# ............................................................            3. Cache Return Value 
 
 
 
+import time
 
+def cache(func):
+    def wrapper(*args, **kwargs):
+        cache_value = {}        # dictionary : In this accessing values are easy as compared to list
+        print(cache_value)
+        if args in cache_value:
+            return cache_value[args]                                            # without executing the function again 
+        num = func(*args, **kwargs)
+        cache_value[args] = num
+        return num
+    return wrapper
 
+@cache
+def log_running_function(a, b):
+    time.sleep(4)
+    return a + b
 
+print(log_running_function(2,9))
+print(log_running_function(2,9))
+print(log_running_function(5,9))
 
 
 
