@@ -33,35 +33,67 @@
 # ...............................................................                YouTube Manager App
 
 
-import json                                                                                               # File Conversion : string to json and json to string
 
-file = 'youtube.txt'
+import json                                                                                               # File Conversion : string to json object and json to string
+
+# file = 'youtube.txt'
 def load_data():
     try:
-        with open('file', 'r') as file:
-            return json.load(file)                                                                         # json.load() function to load the data from the file and convert it into a JSON object.
+        with open('youtube.txt', 'r') as file:
+            test = (json.load(file))                                                                        # Example: edge (google website loading) and In this case, data loading in backend of compiler
+            # print(test)                                                                                   # json.load() function to load the data from the file and convert it into a JSON object.
+            # print(type(test)) # behind : test is a list of json                                           # json.load(file) : list of json objects
+            
+            return test                                                                                     # Here, the load_data() function is called, which returns the value of test. According to the code, test is assigned the value of json.load(file), which is a list of JSON objects. 
+                                                                                                            # Therefore, videos is assigned the value of test, making it a list
     except (FileNotFoundError):
-        return []
+        return ["Create File"]
     
-def save_data_helper(videos):                                                                              # this code saves the videos data into a file named 'file' in JSON format.
-    with  open('file', 'w') as file:
-        json.dump(videos, file)                                                                            # The json.dump() function is used to serialize the videos object and write it as a JSON string to the file. [store the videos data(json format) in the 'youtube.ext' file]
-                                                                                                           # The dump() function takes two parameters: the data to be written and the file object to write the data.
+def save_data_helper(videos):                                                                               # this code saves the videos data into a file named 'file' in JSON format.
+    with  open('youtube.txt', 'w') as file:
+        json.dump(videos, file)                                                                             # The json.dump() function is used to serialize the videos object and write it as a JSON string to the file. [store the videos data(json format) in the 'youtube.ext' file]
+                                                                                                            # The dump() function takes two parameters: the data to be written and the file object to write the data.
 def list_all_videos(videos):
-    pass
+    print("\n")
+    print("*" * 79)
+    for index, video in enumerate(videos, start = 1):                                                       # enumerate(): It add indexing to iterable objects (user ko pata nahi hai what indexing to use) 
+        print(f"{index}. {video['name']}, Duration: {video['time']} ")                                      # jaise hi videos list ko enumerate kiya vo enumerate type me convert ho gya in key:value pair and usko access karke ke liye looping use ki 
+    print("*" * 79)
     
+        
 def add_video(videos):
-    pass
-
+    name = input("Enter video name: ")
+    time = input("Enter video time: ")
+    videos.append({'name': name, 'time': time})                                                             # list should be like: [{}, {}, {}]
+    save_data_helper(videos)
+    
 def update_video(videos):
-    pass
-
+    list_all_videos(videos)
+    
+    index = int(input("Enter the number to update: ")) 
+    if 1<= index <= len(videos):
+        new_name = input("Enter the new video name: ")
+        new_time = input("Enter the new video time: ")
+        videos[index-1] = {'name': new_name, 'time': new_time}                                              # user index = 1 but actual index = 0 (index -1 )
+        save_data_helper(videos)
+    else:
+        print("Invalid, number list is out of bound ")    
+        
+        
 def delete_video(videos):
-    pass
-
+    list_all_videos(videos)
+    
+    index = int(input("Enter the number to be deleted: "))
+    if 1 <= index <= len(videos):
+        del videos[index - 1]                                                                               # del(a keyword) : removes an item at a specified index
+        save_data_helper(videos)
+        
+    else:
+        print("Invalid number")
+        
 def main():                                                                                                 # Industry standard : which method to run first 
     
-    videos = load_data()                                                                                    # Taking videos as a list is easy to be done but some complex method [Assignment]
+    videos = load_data()                                                                                    # Taking videos as a list is easy to be done
 
     while True:                                                                                             # Continuous questioning (user instructions)
         print("\n Youtube Manager | choose an option")
@@ -70,33 +102,46 @@ def main():                                                                     
         print("3. Update a youtube video details")
         print("4. Delete a youtube video")
         print("5. Exit the app")
-        choice = input("Enter your choice")
+        choice = input("Enter your choice: ")
+        # print(videos)
         
         # Choices option : multiple cases
         match choice:
-            case '1':
+            case "1":
                 list_all_videos(videos)                                                                     # method: 
-            case '2':
+            case "2":
                 add_video(videos)                   
-            case '3':
+            case "3":
                 update_video(videos)
-            case '4':
+            case "4":
                 delete_video(videos)
-            case '5':
+            case "5":
                 break                                                                                       # exiting 
             case _:                                                                                         # Default case
                 print("Invalid choice")
                 
     
-if __name__ == "__main__":                                                                                  # '__' : are called as 'dundar'
-    main()
+if __name__ == "__main__":                                                                                  # using if __name__ == "__main__": allows a script to be both run as a standalone program and imported as a module into other scripts. 
+    main()                                                                                                  # If this line is not used, the code inside the if statement will always be executed, even when the script is imported as a module, which may lead to unintended behavior.
+    
 
 
 
 
 
+# ..................................................                Working of enumerate():
 
 
+
+# >>> list = [{'name':'dunky', 'time':'2hr 24min'}, {'name':'tiger', '[{'name': 'dunky', 'time': '2hr 24min'}, {'name': 'tiger', 'time': '3 hrs'}]
+# >>> enumerate(list)
+# <enumerate object at 0x000002349DDD3A10>
+
+# >>> for i, video in enumerate(list, start=1):
+# ...     print(f"{i}. {video['name']}")                                                                    # video ke andar bhi two values hai, so specifying the value needed
+# ...
+# 1. dunky
+# 2. tiger
 
 
 
