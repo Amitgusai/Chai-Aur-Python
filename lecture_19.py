@@ -105,6 +105,8 @@
 # sqlite3 is a lightweight : can be used without a standalone server
 
 
+# The code snippet you provided is establishing a connection to a SQLite database named
+# 'lecture_19.db' and creating a cursor object to interact with the database.
 import sqlite3
 
 conn = sqlite3.connect('lecture_19.db')
