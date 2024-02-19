@@ -34,9 +34,9 @@
 
 
 
-import json                                                                                               # File Conversion : string to json object and json to string
-
-# file = 'youtube.txt'
+import json                                                                                             # JSON is a popular data format used for storing and exchanging data between a server and a client.
+                                                                                                        # The json module is used to load and save data from/to a file in JSON format
+# file = 'youtube.txt'              
 def load_data():
     try:
         with open('youtube.txt', 'r') as file:
