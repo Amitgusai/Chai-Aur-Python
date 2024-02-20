@@ -124,7 +124,7 @@ cursor.execute("""
 def show_table():
     cursor.execute("SELECT * FROM videos")                                                                      # Obtained a tuple 
     print("*" * 80 )
-    for row in cursor.fetchall():                                                                               # cursor is holding the result
+    for row in cursor.fetchall():                                                                               # cursor is holding the result (fetchall: all values in it)
         print(row)
     print("*" * 80)
     
