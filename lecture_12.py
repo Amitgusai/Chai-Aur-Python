@@ -157,7 +157,7 @@
 
 # items  = ["mango", "apple", "orange", "apple", "banana"]
 
-# for i in range(len(items)):                                                #converting i from str to int using range
+# for i in range(len(items)):                                                # converting i from str to int using range
 #     for j in range(i + 1, len(items)):
 #         if(items[i] == items[j]):
 #             print(items[i])

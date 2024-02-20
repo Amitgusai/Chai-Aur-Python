@@ -88,24 +88,32 @@
 
 
 #  >>> tea_varieties = ['black', 'green', 'oolong', 'ginger']
-# >>> tea_varieties.append('masala')                                            Adding at the last in list
+# >>> tea_varieties.append('masala')                                            append() :Adding at the last in list
 # >>> print(tea_varieties)
 # ['black', 'green', 'oolong', 'ginger', 'masala']
 
-# >>> tea_varieties.pop()                                                       Removes last value in list
+# >>> tea_varieties.pop()                                                       pop() : Removes last value in list
 # >>> 'masala'
 # >>> print(tea_varieties)
 # >>> ['black', 'green', 'oolong', 'ginger']
 
 
-# >>> tea_varieties.remove('green')                                             Removes specified value in list
+# >>> tea_varieties.remove('green')                                             remove(): Removes specified value in list
 # >>> print(tea_varieties)
+# ['black', 'oolong', 'ginger']
+
+
+# >>> tea_varieties = ['black', 'green', 'oolong', 'ginger']                    del : Remove based on Indexing in list
+# >>> tea_varieties
+# ['black', 'green', 'oolong', 'ginger']
+# >>> del tea_varieties[1]
+# >>> tea_varieties
 # ['black', 'oolong', 'ginger']
 
 
 # >>> tea_varieties
 # ['black', 'oolong', 'ginger']
-# >>> tea_varieties.insert(1, "black")                                          Inserting value in list (mentioning two arguments: index position , insert value)
+# >>> tea_varieties.insert(1, "black")                                          insert() : Inserting value in list (mentioning two arguments: index position , insert value)
 # >>> tea_varieties
 # ['black', 'black', 'oolong', 'ginger']
 

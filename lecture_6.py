@@ -207,7 +207,7 @@
 # True
 # >>> False == 0
 # True
-# >>> True is 1                                    Reference is different in memory
+# >>> True is 1                                    is : Comparing Reference is different in memory
 # False
 
 
