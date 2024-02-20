@@ -102,28 +102,83 @@
 """     ............................................................        USING DATABASE : SQlite3         ................................................        """
 
 
-# sqlite3 is a lightweight : can be used without a standalone server
+import sqlite3                                                                  # sqlite3 is a lightweight : can be used without a standalone server
+
+conn = sqlite3.connect('lecture_19')                                            # `conn = sqlite3.connect('lecture_19')` is establishing a connection to a SQLite database named 'lecture_19'. 
+                                                                                # This line of code creates a connection object `conn` that allows you to interact with the SQLite database. 
+                                                                                # This connection object is used to execute SQL queries and perform other database operations.
+
+cursor = conn.cursor()                                                          # This cursor object allows you to execute SQL queries, fetch results, and perform various operations on the database.
 
 
-# The code snippet you provided is establishing a connection to a SQLite database named
-# 'lecture_19.db' and creating a cursor object to interact with the database.
-import sqlite3
-
-conn = sqlite3.connect('lecture_19.db')
-
-cursor = conn.cursor()
-
-
+cursor.execute("""
+                CREATE TABLE IF NOT EXIST videos(
+                    Id INTEGER PRIMARY KEY,                                     # This cursor object allows you to execute SQL queries, fetch results, and perform variousoperations on the database.
+                    name TEXT NOT NULL,
+                    time TEXT NOT NULL
+                )   
+""")
 
 
+def show_table():
+    cursor.execute("SELECT * FROM videos")                                                                  # Obtained a tuple 
+    for row in cursor.fetchall():                                                                           # cursor is holding the result
+        print(row)
 
+def add_videos(name, time):
+    cursor.execute("INSERT INTO videos (name, time) VALUES(?, ?)", (name, time))                            # To insert in Table
+    cursor.commmit()                                                                                        # To commit or save in DataBase
+    
+def update_video(new_name, new_time, id):
+    cursor.execute("UPDATE videos SET name = ?, time = ? WHERE id = ?", (new_name, new_time, id))           # To update in Table
+    cursor.commit()
+    
+def delete_video(id):
+    cursor.execute("DELETE FROM videos WHERE id = ? ", (id))                                                # To delete from Table
+    cursor.commit()
 
+def main():
+    
+    while True:
+        
+        print("\n YouTube Manager app using DataBase")
+        print("1-Show the table")
+        print("2-Add videos to the table")
+        print("3-Update videos in the table")
+        print("4-Delete videos from table")
+        print("5-Exit the process")
 
+        choice = int(input("Enter you choice: "))
+        
+        if choice == 1:
+            show_table()
+            
+        elif choice == 2:
+            name = input("Enter the name of the video: ")
+            time = input("Enter the duration of the video: ")
+            add_videos(name, time)
+            
+        elif choice == 3:
+            show_table()
+            id = int(input("Id of the video to be deleted: "))
+            name = input("Name of the video: ")
+            time = input("Duration of the video: ")
+            update_video(name, time, id)
+            
+        elif choice == 4:
+            show_table()
+            id = int(input("Id of the video to be deleted: "))
+            delete_video(id)
+            
+        elif choice == 5:
+            break
+        
+        else:
+            print("Invalid sysntex")
 
+    conn.close()                    # closing the database to prevent from corruption
 
-
-
-
-
+if __name__ == "__main__":
+    main()
 
 
