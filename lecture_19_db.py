@@ -105,7 +105,7 @@
 
 import sqlite3                                                                  # sqlite3 is a lightweight : can be used without a standalone server
 
-conn = sqlite3.connect('lecture_19_db')                                            # `conn = sqlite3.connect('lecture_19')` is establishing a connection to a SQLite database named 'lecture_19'. 
+conn = sqlite3.connect('lecture_19_db')                                         # `conn = sqlite3.connect('lecture_19')` is establishing a connection to a SQLite database named 'lecture_19'. 
                                                                                 # This line of code creates a connection object `conn` that allows you to interact with the SQLite database. 
                                                                                 # This connection object is used to execute SQL queries and perform other database operations.
 
