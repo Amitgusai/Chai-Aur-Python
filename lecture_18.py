@@ -64,7 +64,7 @@ def list_all_videos(videos):
 def add_video(videos):
     name = input("Enter video name: ")
     time = input("Enter video time: ")
-    videos.append({'name': name, 'time': time})                                                             # list should be like: [{}, {}, {}]
+    videos.append({'name': name, 'time': time})                                                             # Adding dictionaries in list : as we need the key value in enumerate for ease
     save_data_helper(videos)
     
 def update_video(videos):
