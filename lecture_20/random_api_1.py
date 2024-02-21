@@ -14,7 +14,7 @@ def fetch_random_user_freeapi():
     response = requests.get(url)                                                            # get() : This method is used to send a HTTP GET request to the specified URL and fetch the data from the API.
     
     data = response.json()                                                                  # The response from the API is received in a string format. The response.json() method is used to convert this string data into a JSON (JavaScript Object Notation) format, which is easier to work with in Python.
-
+                                                                                            # Json typically convert the data in a dictionary (key:value pair)
     # data extracting
     if data["success"] and "data" in data:                                                  # The function then checks if the response was successful and if it contains the "data" key. 
         user_data = data["data"]                                                            # it extracts the user data from the response using user_data = data["data"].
