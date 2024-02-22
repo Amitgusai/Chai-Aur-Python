@@ -20,7 +20,7 @@
 # Open a command prompt and navigate to the desired location for your project.
 # Run the following command to create a virtual environment named my_env:
     
-# virtualenv my_env
+# virtualenv <my_env>
 
 
 
