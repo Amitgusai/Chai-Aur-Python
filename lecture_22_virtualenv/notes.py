@@ -2,10 +2,7 @@
 # virtualenv : Virtual Environment 
 # General understanding : It is as almost a different computer within your system which contains python 
 
-# These packages will be isolated within the my_env and won't affect your system-wide Python installation.
-
-
-# How to install modules form requirement from requirement.txt
+# These packages will be isolated within the <my_env>(virtual environment) and won't affect your system-wide Python installation.
 
 
 
@@ -66,16 +63,27 @@
 
 
 
-# 7.Some Commands:
+# 7. Some Commands:
 
 # pip list : show the list of installed modules
 
 # pip list
 
+# Sending these modules to a external file : requirement.txt
 
 
 
-# 8. Remove the environment (optional):
+# 8. Installation of modules : 
+
+# To install Python modules from a requirements.txt file into a virtual environment :
+
+# pip install -r requirement.txt
+
+# Make sure to run this command in the directory where your requirements.txt file is located
+
+
+
+# 9. Remove the environment (optional):
 
 # If you no longer need the environment, delete its directory:
 # del /f /q my_env
