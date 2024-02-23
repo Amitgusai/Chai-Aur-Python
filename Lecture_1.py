@@ -20,8 +20,10 @@ tea("Lazy")
 # .pyc : This compiled python is also known as 'Frozen Binaries'  
 # But:
 
-    """ 1. '.pyc' is a compiled python file that still requires the help of python interpreter to execute, meanwhile
-    2.'Frozen Binaries' is a standclone executable file which includes both python application and python interpreter."""
+    """ 
+    1. '.pyc' is a compiled python file that still requires the help of python interpreter to execute, meanwhile
+    2.'Frozen Binaries' is a standclone executable file which includes both python application and python interpreter.
+    """
     
 
 # Byte code runs faster: mostly check of syntax are done when converting to byte code 
