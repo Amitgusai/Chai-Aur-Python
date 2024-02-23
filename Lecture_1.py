@@ -8,8 +8,12 @@ tea("Lazy")
 
 # Usually the byte code(runs faster) is hidden from the developer BUT 
 # when we 'import' files or code from 'another file' then the byte code is visible
+ 
 
-# Compiled to byte code 
+    """
+    Compiled to byte code
+    Works only on imported files
+    """
 
 # cpython (default) : It uses and is a standard version of python (python = cpython)
 
