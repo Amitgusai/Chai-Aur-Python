@@ -37,7 +37,7 @@ tea("Lazy")
 
 # Code is looped to iterate byte code : that's why python is interpreter language (as looping is done line by line)
 # also known as python interpreter 
-# It is a run-time engine for every compiler application like (vs code, jupiter etc)
+# It is a run-time engine for every compiler application like (vs code, notebook, mini-conda etc)
 
 
     """ Byte Code (instruction specific to Python Virtual Machine) is not a machine code (It does not directly instruct to Hardware)."""
