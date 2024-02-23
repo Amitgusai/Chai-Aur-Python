@@ -25,3 +25,7 @@ tea("Lazy")
 
 # Byte Code (instruction specific to Python Virtual Machine) is not a machine code (It does not directly instruct to Hardware) 
 
+# Yes, your statement is correct. Bytecode, such as that used in the Java Virtual Machine (JVM) or Python Virtual Machine (PVM), is not the same as machine code. 
+# Bytecode is a form of instruction set designed for efficient execution by a software interpreter, in this case, the JVM or PVM. 
+# On the other hand, machine code is a computer programming language that is directly understood by the computer's hardware. 
+# It is a series of binary instructions that the computer's processor can execute directly
