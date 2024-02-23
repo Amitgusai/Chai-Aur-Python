@@ -35,7 +35,7 @@ tea("Lazy")
 
 # .......................            Python Virtual Machine 
 
-# Code is looped to iterate byte code 
+# Code is looped to iterate byte code : that's why python is interpreter language (as looping is done line by line)
 # also known as python interpreter 
 # run-time engine
 
