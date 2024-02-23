@@ -13,7 +13,7 @@ tea("Lazy")
 
 # 311 : Version name 
 
-# __pycache__ : To Organisize the files : .pyc {compiled python : Technical term} for readibility
+# __pycache__ : To Organisize the files : .pyc {compiled (to byte cod)e : Technical term} for readibility
 
 
 
