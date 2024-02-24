@@ -32,7 +32,7 @@
 
 
 
-# ........................................................              3. Polymorphism in Function (multiple task performing)
+# ........................................................              3. Polymorphism in Function (same thing --> different behaviour --> different situations)
 
 
 
@@ -72,7 +72,7 @@
 
 
 
-# def greet(name = "default value"):                                     This is a default value if no arguments is passed to the Function def
+# def greet(name = "default value"):                                     # This is a default value if no arguments is passed to the Function def
 #     return "Hello, " + name + "!"
     
 # ans = greet()
@@ -87,8 +87,9 @@
                                                                                 # lambda function : functions with no name [Directly function likh sakte hai single line]
                                                                                 # useful when a functions working is not multiple times in a code
                                                                                 
-# cube = lambda x:x ** 3                                                        # First x : parameter and second time : code working
-                                                                                # This defination of lambda cannot be stored in another variable (Reference can)
+# cube = lambda x:x ** 3                                                        # First x : parameter 
+                                                                                # second x ** 3 : code working
+                                                                                # This definition of lambda cannot be stored in another variable (Reference can)
                                                                                 
 # print(cube(3))                                                                # cube is storing a lambda function in itself
 
@@ -169,13 +170,15 @@
 
 
 
-# Exit check karo in Recursion 
-# def factorial(n):                                                                            # Indinite loop
+                                                                                                # Exit check karo in Recursion 
+# def factorial(n):                                                                             # Indinite loop
 #     return n * factorial(n-1)
 
+                                                    # This is Recursion -->
+                                                    
 # def factorial(n):                                                                             # Behind the scene a tree is forming (for understanding)
-#     if n == 0:                                                                                # Exit strategy sochni hai in Recursion
-#         return 1 
+#     if n == 0:                                                                                
+#         return 1                                                                              # Exit strategy sochni hai in Recursion
 #     else:
 #         return n * factorial(n-1)
 

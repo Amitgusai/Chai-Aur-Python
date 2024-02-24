@@ -15,7 +15,7 @@
 
 # Iteration Tools: for, while, comprehension
 # only applicable on objects which are iterable
-# tools query to iterable objects to allow looping: iter() method send hoti hai
+# tools query to iterable objects to allow looping: iter() method send hoti hai (MANUALLY)
 # when iter tool receives __next__ or next() as a response: jitne baar next() karte hai utni values print/use hogi
 # At final index/value empty(out of range): Stop_Iteration - Exception raise hoga
 # Iterable tools are pre-pragrammed how to read file and handle StopIteraiton Exception
@@ -36,7 +36,7 @@
 
 
 
-# When we a store a file in a variable then it is itself a iterable object but in list we have to convert list to a iterable object using iter() method as list lack __next__method
+# When we a store a file in a variable then it, in itself a iterable object but in list we have to convert list to a iterable object using iter() method as list lack __next__method
 
 
 
@@ -106,7 +106,7 @@
 
 
 # >>> for read in open('chai.py'):                                              Loop to iterate a file
-# ...     print(read, end='')                                                   end='' : no extra new line       
+# ...     print(read, end='')                                                   end='' : for no extra new line       
 # ...
 # print("Chai Aur Code")
 
@@ -161,7 +161,7 @@
 
 # >>> mylist = [1, 3, 4, 5, 2]
 # >>> iter(mylist)
-# <list_iterator object at 0x000002B8200A5630>                                       Poiting at first Memory location
+# <list_iterator object at 0x000002B8200A5630>                                       Pointing at first Memory location
 
 
 

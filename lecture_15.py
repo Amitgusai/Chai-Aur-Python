@@ -58,7 +58,7 @@ def f1():
                                                                                         
 result = f1()                                                                           
 print(result)                                                                           # Reference of f2
-result()                                                                                # Closure : 'result' contain the definition/reference of actual() function + BackPack -> reference of variables(x) used in it are also stored in 'result')
+result()                                                                                # Closure : 'result' contain the definition/reference of actual() function + BackPack -> reference of all the variables(in this case:x) used in it are also stored in 'result')
 
 
 

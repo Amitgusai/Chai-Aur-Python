@@ -98,11 +98,11 @@
 # -1                                                                         If nothing found : -1 return as default Value
 
 # >>> chai = "ginger chai chai chai chai"
-# >>> print(chai.count("chai"))                                              No. of repeated string
+# >>> print(chai.count("chai"))                                              count() : No. of repeated string
 # 4
 
 # >>> chai = "lemon"
-# >>> print(len(chai))                                                       no. of characters in a string
+# >>> print(len(chai))                                                       len () : no. of characters in a string
 # 5
 
 
@@ -168,7 +168,7 @@
 
 # User: Windows Path
 
-# Windows ke forward slash : '\' create many problems for windows path.                                     Important
+# Windows ke backward slash : '\' create many problems for windows path.                                     Important
 # because '\' is a unicode character, so we use unicode escapes like r"" and \"                     
 
 # Example: 

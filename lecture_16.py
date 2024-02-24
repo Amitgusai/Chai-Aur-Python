@@ -21,6 +21,8 @@
     
 # my_car = Car("TATA", "Nexon")                                               # Car() -> Syntax to create 'object' 
 
+                                                                              # my_car is a reference to an object of class Car.
+                                                                              
 # print(my_car.brand)                                                         # The code `print(my_car.brand)` is accessing the `brand` attribute of the `my_car` object using the dot notation '.' and printing its value.
 # print(my_car.model)
 
@@ -28,7 +30,7 @@
 
 
 
-# ''''''''''''''''''''''''''''''''''''''''''''              Instance of a Class:      ( my_car --> specific Object, instance of a class)
+# ''''''''''''''''''''''''''''''''''''''''''''              Instance of a Class:      ( my_car[reference of object:car()] --> specific Object, instance of a class)
 
     
 # An instance of a class is like a special version of something that we create based on a blueprint. Let's say we have a blueprint for a car. The blueprint tells us what a car 
@@ -39,6 +41,7 @@
 
 # In simple terms, an instance of a class is like a real thing that we create based on a plan or blueprint. It has all the characteristics that the plan says it should have
 
+# Example : Army Military Drills is an instance of War.
 
 
 
@@ -83,11 +86,12 @@
 
 # class ElectricCar(Car):                                                               # (Car) : ElectricCar is inheriting Car class
 #     def __init__(self, brand, model, battery_size):
-        
+                                                                                        # Car.__init__(self, brand, method) --> also be used for inheritance           # IMP
+                                                                                        
 #         super().__init__(brand, model)                                                # The line `super().__init__(brand, model)` is calling the `__init__` method of the parent class (`Car`) 
 #         self.battery_size = battery_size                                              # and passing the `brand` and `model` arguments to it. This allows -->
 #                                                                                       # 'ElectricCar' class to inherit the `brand` and `model` attributes from the `Car` class
-        
+            
         
 
 # my_tesla = ElectricCar("Tesla", "model-S", "90kWh")
@@ -113,7 +117,7 @@
 #         self.model = model                                                                  # To access them : we create methods
         
 #     def get_brand(self):                                                                    # getters Convention : to start with 'get_' (we can change but will be breaking convention in industry)
-#         return self.__brand + " !"                                                          # Useful in Cases where we need an response/input with some additional units for good appearance
+#         return self.__brand + " !"                                                          # Useful in Cases where we need an response/input with some additional thing for good appearance
         
 #     def full_name(self):
 #         return f"{self.__brand} {self.model}"
@@ -349,7 +353,7 @@
 
 
 
-# ..........................................................         10. Multiple Inheritance           (Doubt)
+# ..........................................................         10. Multiple Inheritance
 
 
 
@@ -363,33 +367,12 @@
         
 # class ElectricCar(Battery, Engine):
 #     def __init__(self, model, power):
-#         super().__init__(model)
-#         # super().__init__(power)                                                                               # This is over-riding my Battery class
+#         Battery.__init__(self, model)
+#         Engine.__init__(self, power)                                                                               # Explicitly calling the Engine class's __init__() method
 
 # my_new_tesla = ElectricCar("cello", "506-HorsePower")
 
 # print(my_new_tesla.model)
-# # print(my_new_tesla.power)
+# print(my_new_tesla.power)
     
     
-    
-    
-    
-# ////////////////////////////////////////////////////////////////////////////////////
-
-
-
-# class Battery:
-#     def battery_size(self):
-#         return "long lasting battery"
-    
-# class Engine:
-#     def engine_info(self):
-#         return "more cc than a bike's"
-    
-# class ElectricCar(Battery, Engine):
-#     pass
-
-# my_new_tesla = ElectricCar()
-# print(my_new_tesla.engine_info())
-# print(my_new_tesla.battery_size())

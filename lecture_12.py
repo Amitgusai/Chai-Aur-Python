@@ -31,7 +31,7 @@
 
 
 
-                                                        # 3. Multiplication Table Printer
+                                                        # 3. Multiplication Table Printer (skipping 5th)
 
 
 # number = int(input("Given Nunber: "))
@@ -59,16 +59,24 @@
 
                                                         # 4. Reverse a String 
 
-# string = "python"
-# reversed_string = ""
-# num = 1
+string = "python"
+num = 1
 
-# for char in string:                                                                        2 methods to solve
+# for char in string:                                                                           # 1st method
 #     print(string[-num])
 #     num = num + 1
 
+
+
+
+# for i in range(1, len(string)+1):                                                             # 2nd method
+#     print(string[-i], end="")
+
+
+
+# reversed_string = ""                                                                           # 3rd method 
 # for char in string:
-#     reversed_string = char + reversed_string
+#     reversed_string = char + reversed_string                                                   # To store in a variable
 
 # print(reversed_string)
 
@@ -153,7 +161,8 @@
 #                                                       9. List Uniqueness Checker [2 methods used]
 
 
-#                                                                   Method - 1 : Time Complexity -- O(n**2)
+                                    # Method - 1 : Time Complexity -- O(n**2)
+                                    
 
 # items  = ["mango", "apple", "orange", "apple", "banana"]
 
@@ -166,7 +175,7 @@
 
  
 
-#                                                                   Method - 2 : Time Complexity -- O(n)    [Using : set()]
+                                    # Method - 2 : Time Complexity -- O(n)    [Using : set()]
 
 
 # unique = set()                                                              #set(): It only keeps unique value in it 

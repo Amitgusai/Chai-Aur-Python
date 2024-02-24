@@ -24,7 +24,7 @@
 # 'chai aur Code'
 
 # >>> x, y, z
-# (2, 3, 4)                                                                          Tuple 
+# (2, 3, 4)                                                                           Tuple 
 # >>> y % 2                                                                           Modula (Remainder find out)
 # 1
 
@@ -218,7 +218,7 @@
 # ................................                  Sets:
 
 # >>> set1 = {1,2,3,4,5}                                              Not similar to Dictionary as they have Key:Value pair
-# >>> set2 = {2,5,7,8}
+# >>> set2 = {2,5,7,8}                                                Only contain unique elements          # IMP
 # >>> set1 and set2                                                   Intersection  (Similar in Both)
 # {2,5}
 # >>> set1 or set3                                                    Union (Unique(Excluded similar))

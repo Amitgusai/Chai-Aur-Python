@@ -64,10 +64,13 @@
 
 
 
+
 # >>> for n in chai_type:
 # ...     print(n,chai_type[n],end = ":")                                     Specifying the Ending
 # ...
 # chai black:name rajasthani:cups 2:>>>
+
+
 
 
 # >>> for key, value in chai_type.items():                                    items() : key-value ka pair
@@ -76,6 +79,22 @@
 # chai black
 # name rajasthani
 # cups 2
+
+
+
+
+# my_dict = {"a": 1, "b": 2, "c": 3}
+
+                                                                                # Iterate over the keys in the dictionary
+# for key in my_dict:
+                                                                                # Access the value associated with the key
+#     value = my_dict[key]
+                                                                                # Perform some operation on the key and value
+#     print(f"{key}: {value}")
+
+
+
+
 
 
 
