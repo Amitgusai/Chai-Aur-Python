@@ -10,10 +10,10 @@ tea("Lazy")
 # when we 'import' files or code from 'another file' then the byte code is visible
  
 
-    """
+"""
     Compiled to byte code
     Works only on imported files
-    """
+"""
 
 # cpython (default) : It uses and is a standard version of python (python = cpython)
 
@@ -25,10 +25,10 @@ tea("Lazy")
 # But:
 
 
-    """ 
+""" 
     1. '.pyc' is a compiled python file that still requires the help of python interpreter to execute, meanwhile
     2.'Frozen Binaries' is a standclone executable file which includes both python application and python interpreter.
-    """
+"""
     
 
 # Byte code runs faster: mostly check of syntax are done when converting to byte code 
@@ -40,15 +40,15 @@ tea("Lazy")
 # It is a run-time engine for every compiler application like (vs code, notebook, mini-conda etc)
 
 
-    """ Byte Code (instruction specific to Python Virtual Machine) is not a machine code (It does not directly instruct to Hardware)."""
+""" Byte Code (instruction specific to Python Virtual Machine) is not a machine code (It does not directly instruct to Hardware)."""
 
 
-    """
+"""
     Bytecode, such as that used in the Java Virtual Machine (JVM) or Python Virtual Machine (PVM), is not the same as machine code. 
     Bytecode is a form of instruction set designed for efficient execution by a software interpreter, in this case, the JVM or PVM.
-    """
+"""
     
-    """
+"""
     On the other hand, machine code is a computer programming language that is directly understood by the computer's hardware. 
     It is a series of binary instructions that the computer's processor can execute directly.
-    """
+"""
