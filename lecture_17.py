@@ -1,8 +1,8 @@
 # ...................................................         Decorators in Python
 
 
-# A decorator is a function that takes another function as input and extends its functionality without modifying its code.
-# Decorators in Python are like tollbooths for functions, adding functionality without changing the original function.
+# A decorator is a function that takes another function as input/parameter and extends its functionality without modifying its code.
+# Decorators in Python are like tollbooth for functions, adding functionality without changing the original function.
 
 
 # Most Basic Decorator: 
