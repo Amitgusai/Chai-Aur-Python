@@ -18,7 +18,7 @@
 # Accessing values
 
 
-# >>> chai_type = {"chai": "black", "name": "rajwari", "cups": 2}
+# chai_type = {"chai": "black", "name": "rajwari", "cups": 2}
 # >>> print(chai_type)
 # {'chai': 'black', 'name': 'rajwari', 'cups': 2}
 
@@ -45,7 +45,7 @@
 
 # .....................................                   Loop in Dictionaries:                       
     
-# >>> chai_type
+# >>> chai_type 
 # {'chai': 'black', 'name': 'rajasthani', 'cups': 2}
 # >>> for n in chai_type:                                                   In dictionary, Iterate (result:keys)
 # ...     print(n)
@@ -81,6 +81,15 @@
 # cups 2
 
 
+
+# ................................................              While Loop on Dictionaries          
+
+
+# chai_type = {"chai": "black", "name": "rajwari", "cups": 2}
+
+# while chai_type:
+#     key , value = chai_type.popitem()                                         # not iterable
+#     print(key, ":", value)
 
 
 # my_dict = {"a": 1, "b": 2, "c": 3}
@@ -186,6 +195,14 @@
 # >>> print(cube)
 # {0: 5, 1: 6, 2: 7, 3: 8, 4: 9, 5: 10, 6: 11, 7: 12, 8: 13, 9: 14}
 
+
+
+# def square(num):
+    
+
+
+
+# program
 
 
 
