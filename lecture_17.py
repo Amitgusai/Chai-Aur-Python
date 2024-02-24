@@ -5,7 +5,7 @@
 # Decorators in Python are like tollbooth for functions, adding functionality without changing the original function.
 
 
-# Most Basic Decorator: 
+# Most Basic Decorator Syntax: 
     
 def debug(func):
     def wrapper():
@@ -54,13 +54,19 @@ example_func(2)                                                                 
 
 
 def debug(func):
-    def wrapper(*args, **kwargs):
-        ans = func(*args, **kwargs)                                                                                     # To access name of the arguments :-
-        args_value = ', '.join(str(args) for args in args)                                                              # join() : we get a iterable list --> (comprehension) applying looping --> str(arg) : value stored and converted to string
-        kwargs_value = ', '.join(f"{key}={value} " for key, value in kwargs.items())
+    def wrapper(*args, **kwargs):                                                                                       # args is a tuple of positional arguments passed to a function
+                                                                                                                        # kwargs is a dictionary of keyword arguments passed to a function.
+        ans = func(*args, **kwargs)                                                                                     
+                                                                                                                        
+                                                                                                                        # To access values of the arguments :-
+                                                                                                                        
+        args_value = ', '.join(str(args) for args in args)                                                              # 1. --> The comprehension iterates over the elements of args, kwargs and str(args) : converts each element to a string.
+        kwargs_value = ', '.join(f"{key}:{value}" for key, value in kwargs.items())                                     # 2. --> join() : The join() function concatenates a list of strings into a single string, with a specified separator between each string.
+                                                                                                                        
+        
         print(f"calling {func.__name__} with args {args_value} and kwargs {kwargs_value}")
         return ans
-    
+
     return wrapper                                                                                                      # wrapper ki definition return hori to debug 
 
 @debug
@@ -77,24 +83,32 @@ greet("chai", greeting="hanji")
 
 
 
-# ............................................................            3. Cache Return Value 
+# ............................................................            3. Cache Return Value         (main point : args is of tuple type)
 
 
 #  It stores the results of function calls in a dictionary to avoid redundant computations when the same arguments are passed to the function again.
 
 import time
 
-def cache(func):
+def cache(func):                                                                                                        
+    
     cache_value = {}                                                                                                    # should be written outside the wrapper funciton and storing the result
                                                                                                                         # dictionary : In this accessing values are easy as compared to list(because of indexing in list)
     def wrapper(*args, **kwargs):
         
-        # print(cache_value)                                                                                              # Rough
+        # print(cache_value)                                                                                            # Rough
         
-        if args in cache_value:
-            return cache_value[args]                                                                                    # without executing the function again 
-        num = func(*args, **kwargs)
-        cache_value[args] = num
+        if args in cache_value:                                                                                         # Inside the wrapper, this line checks if the input arguments (*args) are present in the cache_value dictionary. 
+                                                                                                                        # If they are, it means the function has been called with those arguments before, 
+            return cache_value[args]                                                                                    # so it returns the cached result (value) from the dictionary.
+                                                                                              
+
+        
+        num = func(*args, **kwargs) 
+        cache_value[args] = num                                                                                         # cache_value[args] = num: This line adds the input arguments (*args) as the 'key' and the result (num) as the 'value' to the cache_value dictionary. 
+                    # key = value  pair                                                                                 # This stores the result for future reference.
+
+        
         return num
     
     return wrapper
@@ -107,19 +121,5 @@ def log_running_function(a, b):
 print(log_running_function(2, 3))       # same
 print(log_running_function(5, 9))
 print(log_running_function(2, 3))       # same
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
