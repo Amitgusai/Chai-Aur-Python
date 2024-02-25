@@ -1,44 +1,28 @@
-# # ...................................................             Anaconda
-
-
-# As soon as the anaconda installed in our system vo firstly it inject itself in the powershell and by default ek base virtualenv activate ho hata hai unlike python virtualenv in lecture_22
+"""...................................................             Conda       ..........................................."""
 
 
 
+# As soon as the anaconda installed in our system, firstly it inject itself in the powershell and 
+# By default ek base virtualenv activate ho jata hai unlike python virtualenv (.venv) in lecture_22 (which we have to activate manually using command)
 # In conda, we can create different virtual environment and install modules and directly be used in vs code
 
-
-
-# Creating conda: 
     
-#     conda create --name newpy python=3.10
+    
+"""         Rule : Do not use 'pip' and 'conda' simultaneously      """
     
     
     
-    
-# rule: do not use pip and conda simultaneously
-    
-    
-    
-    
-    
-    
-    
-# PS D:\Chai Aur Code\Chai-Aur-Python> python -u "d:\Chai Aur Code\Chai-Aur-Python\python_foundation_lectures\tempCodeRunnerFile.py"
-#   File "d:\Chai Aur Code\Chai-Aur-Python\python_foundation_lectures\tempCodeRunnerFile.py", line 1
-#     nt and install modules and directly be used in vs code
-#                    ^^^^^^^
-# SyntaxError: invalid syntax
+"""     To show environment list        """
 # PS D:\Chai Aur Code\Chai-Aur-Python> conda env list
 # # conda environments:
 # #
 # base                     E:\Anaconda
 
-# PS D:\Chai Aur Code\Chai-Aur-Python> conda create --name py310 python = 3.10
 
-# CondaValueError: invalid package specification: =
 
-# PS D:\Chai Aur Code\Chai-Aur-Python> conda create --name newpy python=3.10
+
+"""         To create a new environment named : newpy     """
+# PS D:\Chai Aur Code\Chai-Aur-Python> '''conda create --name newpy python=3.10'''
 # Collecting package metadata (current_repodata.json): done
 # Solving environment: done
 
@@ -109,40 +93,28 @@
 # # To deactivate an active environment, use
 # #
 # #     $ conda deactivate
+"""        END      """
 
+
+"""     To show environment list        """
 # PS D:\Chai Aur Code\Chai-Aur-Python> conda env list
 # # conda environments:
 # #
 # base                     E:\Anaconda
 # newpy                    E:\Anaconda\envs\newpy
 
-# PS D:\Chai Aur Code\Chai-Aur-Python> conda activate newpy
+
+
+
+""" To Deactivate Conda """
+# PS D:\Chai Aur Code\Chai-Aur-Python> conda deactivate
 # PS D:\Chai Aur Code\Chai-Aur-Python>
 
 
 
+"""        Installing module seaborn        """
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#                                      conda install seaborn
+# PS D:\Chai Aur Code\Chai-Aur-Python> conda install seaborn
 # Collecting package metadata (current_repodata.json): done
 # Solving environment: done
 
@@ -201,42 +173,21 @@
 # Preparing transaction: done                                                                   
 # Verifying transaction: done                                                                   
 # Executing transaction: done
+"""       END       """
+
+
 # PS D:\Chai Aur Code\Chai-Aur-Python> python
 # Python 3.11.5 | packaged by Anaconda, Inc. | (main, Sep 11 2023, 13:26:23) [MSC v.1916 64 bit (AMD64)] on win32
 # Type "help", "copyright", "credits" or "license" for more information.
 # >>> import numpy as np
 # >>> exit()
-# PS D:\Chai Aur Code\Chai-Aur-Python> conda deactivate
-# PS D:\Chai Aur Code\Chai-Aur-Python> conda deactivate
-# PS D:\Chai Aur Code\Chai-Aur-Python> conda env list
 
 
-
-
-# ///////////////////
-
-# To stop conda from auto activation during the start of the terminal: 
-
+"""     To stop conda from auto activation during the start of the terminal     """
 # conda config --set auto_activate_base false
 
 
+""""    To Use jupyter Notebook within vs code    :  .ipynb     """
+# 1. jupyter notebook is in the format 'ipynb'     (I python notebook)
 
-
-# /////////////
-# jupyter notebook is in the format ipynb     (I python notebook)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+# 2. To select a kernel (conda env)
