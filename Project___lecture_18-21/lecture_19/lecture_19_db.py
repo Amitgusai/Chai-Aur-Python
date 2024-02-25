@@ -164,7 +164,7 @@ def main():
             
         elif choice == 3:
             show_table()
-            id = int(input("Id of the video to be deleted: "))
+            id = int(input("Id of the video to be updated: "))
             name = input("Name of the video: ")
             time = input("Duration of the video: ")
             update_video(name, time, id)
