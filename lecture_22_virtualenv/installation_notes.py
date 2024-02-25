@@ -6,13 +6,13 @@
 
 
 
-# 1. Install virtualenv:
+"""     1. Install virtualenv:      """
     
 # pip install virtualenv
 
 
 
-# 2. Create your environment:
+"""     2. Create your environment:     """
     
 # Open a command prompt and navigate to the desired location for your project.
 # Run the following command to create a virtual environment named my_env:
@@ -21,7 +21,7 @@
 
 
 
-# 3. Activate the environment:
+"""     3. Activate the environment:        """
 
 # Navigate to the Scripts subdirectory of your created environment:
 
@@ -31,7 +31,7 @@
 
 
 
-# If Problem raised: 
+"""     If Problem raised:       """
     
 # PowerShell's execution policy, which is preventing you from running scripts. 
 # This is a security feature in PowerShell to prevent unauthorized scripts from running on your system.
@@ -47,7 +47,7 @@
 
 
 
-# 4. Install packages:
+"""     4. Install packages:    """
 
 # While the environment is activated, use pip to install necessary packages:
 # pip install <package_name>
@@ -56,14 +56,15 @@
 
 
 
-# 6. Deactivate the environment:
+"""     6. Deactivate the environment:      """
 
-# When finished, deactivate the environment to return to your system's Python:
+# When finished, deactivate the environment to return to your system's Python simply write:
+
 # deactivate    (Inside --> .venv)
 
 
 
-# 7. Some Commands:
+"""     7. Some Commands:    """
 
 # pip list : show the list of installed modules
 
@@ -73,7 +74,7 @@
 
 
 
-# 8. Installation of modules : 
+"""     8. Installation of modules :     """
 
 # To install Python modules from a requirements.txt file into a virtual environment :
 
@@ -83,7 +84,7 @@
 
 
 
-# 9. Remove the environment (optional):
+"""     9. Remove the environment (optional):   """
 
 # If you no longer need the environment, delete its directory:
 # del /f /q my_env
