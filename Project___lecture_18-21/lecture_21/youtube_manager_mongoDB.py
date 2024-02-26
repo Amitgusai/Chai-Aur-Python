@@ -31,8 +31,7 @@ db = client["YoutubeManager"]                                                   
                                                                                                                                             # This allows you to interact with the "YoutubeManager" database using the `db` reference in your Python code.
 try:
     video_collection = db["videos"]                                                                                                         # In MongoDB, we have use the database to actually see some changes/progress in atlas
-except Exception as e:
-    print(str(e))
+except Exception as e: print(str(e))
     
 # print(video_collection)
 

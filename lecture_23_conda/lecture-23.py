@@ -1,24 +1,18 @@
 """...................................................             Conda       ..........................................."""
 
-
-
-# As soon as the anaconda installed in our system, firstly it inject itself in the powershell and 
+# As soon as the anaconda installed in our system, firstly it inject itself in the powershell and
 # By default ek base virtualenv activate ho jata hai unlike python virtualenv (.venv) in lecture_22 (which we have to activate manually using command)
 # In conda, we can create different virtual environment and install modules and directly be used in vs code
 
-    
-    
+
 """         Rule : Do not use 'pip' and 'conda' simultaneously      """
-    
-    
-    
+
+
 """     To show environment list        """
 # PS D:\Chai Aur Code\Chai-Aur-Python> conda env list
 # # conda environments:
 # #
 # base                     E:\Anaconda
-
-
 
 
 """         To create a new environment named : newpy     """
@@ -40,7 +34,6 @@
 #      conda install conda=24.1.2
 
 
-
 # ## Package Plan ##
 
 #   environment location: E:\Anaconda\envs\newpy
@@ -53,23 +46,23 @@
 
 #     package                    |            build
 #     ---------------------------|-----------------
-#     bzip2-1.0.8                |       hcfcfb64_5         122 KB  conda-forge    
-#     ca-certificates-2024.2.2   |       h56e8100_0         152 KB  conda-forge    
-#     libffi-3.4.2               |       h8ffe710_5          41 KB  conda-forge    
-#     libsqlite-3.45.1           |       hcfcfb64_0         850 KB  conda-forge    
-#     libzlib-1.2.13             |       hcfcfb64_5          54 KB  conda-forge    
-#     openssl-3.2.1              |       hcfcfb64_0         7.8 MB  conda-forge    
-#     pip-24.0                   |     pyhd8ed1ab_0         1.3 MB  conda-forge    
-#     python-3.10.13             |h4de0772_1_cpython        15.2 MB  conda-forge   
-#     setuptools-69.1.1          |     pyhd8ed1ab_0         459 KB  conda-forge    
-#     tk-8.6.13                  |       h5226925_1         3.3 MB  conda-forge    
-#     tzdata-2024a               |       h0c530f3_0         117 KB  conda-forge    
-#     ucrt-10.0.22621.0          |       h57928b3_0         1.2 MB  conda-forge    
-#     vc-14.3                    |      hcf57466_18          17 KB  conda-forge    
-#     vc14_runtime-14.38.33130   |      h82b7239_18         732 KB  conda-forge    
-#     vs2015_runtime-14.38.33130 |      hcb4865c_18          17 KB  conda-forge    
-#     wheel-0.42.0               |     pyhd8ed1ab_0          56 KB  conda-forge    
-#     xz-5.2.6                   |       h8d14728_0         213 KB  conda-forge    
+#     bzip2-1.0.8                |       hcfcfb64_5         122 KB  conda-forge
+#     ca-certificates-2024.2.2   |       h56e8100_0         152 KB  conda-forge
+#     libffi-3.4.2               |       h8ffe710_5          41 KB  conda-forge
+#     libsqlite-3.45.1           |       hcfcfb64_0         850 KB  conda-forge
+#     libzlib-1.2.13             |       hcfcfb64_5          54 KB  conda-forge
+#     openssl-3.2.1              |       hcfcfb64_0         7.8 MB  conda-forge
+#     pip-24.0                   |     pyhd8ed1ab_0         1.3 MB  conda-forge
+#     python-3.10.13             |h4de0772_1_cpython        15.2 MB  conda-forge
+#     setuptools-69.1.1          |     pyhd8ed1ab_0         459 KB  conda-forge
+#     tk-8.6.13                  |       h5226925_1         3.3 MB  conda-forge
+#     tzdata-2024a               |       h0c530f3_0         117 KB  conda-forge
+#     ucrt-10.0.22621.0          |       h57928b3_0         1.2 MB  conda-forge
+#     vc-14.3                    |      hcf57466_18          17 KB  conda-forge
+#     vc14_runtime-14.38.33130   |      h82b7239_18         732 KB  conda-forge
+#     vs2015_runtime-14.38.33130 |      hcb4865c_18          17 KB  conda-forge
+#     wheel-0.42.0               |     pyhd8ed1ab_0          56 KB  conda-forge
+#     xz-5.2.6                   |       h8d14728_0         213 KB  conda-forge
 # -64::vc-14.3-hcf57466_18
 #   vc14_runtime       conda-forge/win-64::vc14_runtime-14.38.33130-h82b7239_18
 #   vs2015_runtime     conda-forge/win-64::vs2015_runtime-14.38.33130-hcb4865c_18
@@ -104,12 +97,9 @@
 # newpy                    E:\Anaconda\envs\newpy
 
 
-
-
 """ To Deactivate Conda """
 # PS D:\Chai Aur Code\Chai-Aur-Python> conda deactivate
 # PS D:\Chai Aur Code\Chai-Aur-Python>
-
 
 
 """        Installing module seaborn        """
@@ -130,7 +120,6 @@
 # Or to minimize the number of packages updated during conda update use
 
 #      conda install conda=24.1.2
-
 
 
 # ## Package Plan ##
@@ -170,8 +159,8 @@
 
 # Downloading and Extracting Packages
 
-# Preparing transaction: done                                                                   
-# Verifying transaction: done                                                                   
+# Preparing transaction: done
+# Verifying transaction: done
 # Executing transaction: done
 """       END       """
 
