@@ -1,2 +1,2 @@
-print("Brain Storming Word Game!")yy
+print("Brain Storming Word Game!")
 
