@@ -34,14 +34,12 @@
 
 
 # In List:
-
-#     New Reference will be created in memory each time a list is redeclared or declared whether of same value or not.
-#     A list even with Same Value assigned can be considered as having different Reference.
-
-
-# WHY?:         
-''' Do not quote this statement(below). Have to improve this '''
-    # As list is not immutable [immutable: are whose reference's value can not be changed ] which is why list's reference cannot be assigned to others in memory.
+    # In Python, when you declare a list, it's stored in a specific location in memory. T
+    # his location is what we refer to as the reference of the list. Even if two lists have the same values, they are stored in different memory locations, hence they have different references.
+    
+# Why?
+    # This is because Python lists are mutable, meaning their contents can be changed after they are created. 
+    # So, each list needs its own unique location in memory where its contents can be modified independently of any other list
 
 
 # Example: 
